@@ -1,0 +1,63 @@
+
+/* Header CSS */
+header{
+    width: 100dvw;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    border: 2px solid transparent;
+}
+
+header > section{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Logo CSS */
+
+.logo{
+    width: 85px;
+    height: 85px;
+}
+
+.logo > img{
+    width: 75px;
+}
+
+/* IEM AND UEM LOGO */
+.college{
+    margin-top: 9px;
+    margin-right: 15px;
+}
+
+
+.fixed-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    overflow: hidden;
+    /* align-items: center; */
+}
+
+@media screen and (max-width: 835px) {
+    header{
+        width: 99vw;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .logo{
+        display: none;
+    }
+
+    .fixed-content{
+        width: 90vw;
+    }
+}

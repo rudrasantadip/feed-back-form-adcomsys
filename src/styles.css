@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding:0 ;
+    background-image: url('src/assets/images/back-school.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+
+@media screen {
+    
+}
+
+@media screen and (max-width: 768px) {
+  
+}
+
+
+@media screen and (max-width: 480px) {
+    body{
+        background-position: center;
+    }
+}
