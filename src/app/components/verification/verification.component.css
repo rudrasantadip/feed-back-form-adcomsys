@@ -8,6 +8,10 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top:10vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .card{
@@ -51,16 +55,14 @@
 }
 
 @media screen and (max-width: 1000px) {
-   .shrink{
-    width: 0%;
-   }
+ 
 }
 
 
 @media screen and (max-width: 480px) {
-    .shrink{
-        width: 0;
-       }
+    .main{
+        width: 100vw;
+    }
 
     .content{
         width: 90vw;
