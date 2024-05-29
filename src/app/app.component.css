@@ -57,6 +57,10 @@ header > section{
         display: none;
     } */
 
+    .adcomsys{
+        margin-left: 9px;
+    }
+
     .fixed-content{
         margin-top: 10px;
         width: 95vw;
