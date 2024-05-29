@@ -93,16 +93,173 @@
 
         <div class="radios">
           <input type="radio" name="attend" id="r1" value="yes" />
-          <label for="apple">Yes</label><br />
+          <label for="attend">Yes</label><br />
 
           <input type="radio" name="attend" id="r1" value="no" />
-          <label for="apple">No</label><br />
+          <label for="attend">No</label><br />
         </div>
       </div>
 
       <div class="radio-box">
         <span>How Satisfied are you with the following aspects of the event</span>
-        
+        <table>
+          <thead>
+              <tr>
+                <th>         </th>
+                  <th>Not Well at all</th>
+                  <th>Somewhat Well</th>
+                  <th>Very well</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Explained the purpose of the event</td>
+                  <td><input type="radio" name="purpose" id="" value="notwell"></td>
+                  <td><input type="radio" name="purpose" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="purpose" id="" value="verywell"></td>
+              </tr>
+              <tr>
+                  <td>Presented Concepts in a clear and easy way</td>
+                  <td><input type="radio" name="presentation" id="" value="notwell"></td>
+                  <td><input type="radio" name="presentation" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="presentation" id="" value="verywell"></td>
+              </tr>
+              <tr>
+                  <td>Maintained my interest throughout the duration of the event</td>
+                  <td><input type="radio" name="interest" id="" value="notwell"></td>
+                  <td><input type="radio" name="interest" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="interest" id="" value="verywell"></td>
+              </tr>
+
+              <tr>
+                <td>Encouraged atendee participation</td>
+                <td><input type="radio" name="encouragement" id="" value="notwell"></td>
+                  <td><input type="radio" name="encouragement" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="encouragement" id="" value="verywell"></td>
+            </tr>
+
+            <tr>
+              <td>Throughly answered questions from the participants</td>
+              <td><input type="radio" name="questions" id="" value="notwell"></td>
+                  <td><input type="radio" name="questions" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="questions" id="" value="verywell"></td>
+          </tr>
+          </tbody>
+      </table>
+      </div>
+
+
+      <div class="radio-box">
+        <span>How would you rate the management team of the event? *</span>
+        <table>
+          <thead>
+              <tr>
+                <th>         </th>
+                  <th>Not Well at all</th>
+                  <th>Somewhat Well</th>
+                  <th>Very well</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Time Management</td>
+                  <td><input type="radio" name="timemanagement" id="" value="notwell"></td>
+                  <td><input type="radio" name="timemanagement" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="timemanagement" id="" value="verywell"></td>
+              </tr>
+              <tr>
+                  <td>Content Quality</td>
+                  <td><input type="radio" name="contentquality" id="" value="notwell"></td>
+                  <td><input type="radio" name="contentquality" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="contentquality" id="" value="verywell"></td>
+              </tr>
+              <tr>
+                  <td>Help and support</td>
+                  <td><input type="radio" name="helpandsupport" id="" value="notwell"></td>
+                  <td><input type="radio" name="helpandsupport" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="helpandsupport" id="" value="verywell"></td>
+              </tr>
+
+              <tr>
+                <td>Ability to respond and solve your problems</td>
+                <td><input type="radio" name="encouragement" id="" value="notwell"></td>
+                  <td><input type="radio" name="encouragement" id="" value="somewhatwell"></td>
+                  <td><input type="radio" name="encouragement" id="" value="verywell"></td>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+
+
+      <div class="number-rating">
+        <span>How likely are you to recommend this to your friends?*</span>
+        <div class="rating-box">
+          <div class="number" *ngFor="let number of numberRating(10)">
+            <button>{{number}}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="personal-info">
+        <div class="expectation-box">
+          <span>Were Your Expectation of the event met?</span>
+
+          <div class="radio-group">
+            <input type="radio" name="attend" id="r1" value="beyond my expectations" />
+            <label for="attend">Beyond my expectations</label><br />
+  
+            <input type="radio" name="attend" id="r1" value="met as expected" />
+            <label for="attend">Met as expected</label><br/>
+
+            <input type="radio" name="attend" id="r1" value="below my expectations" />
+            <label for="attend">Below my expectations</label><br/>
+          </div>
+        </div>
+
+        <div class="feedback">
+          <span>How could the event be improved?</span>
+          <textarea  name="feedback" id="" [maxLength]="1000">please enter your feedback</textarea>
+        </div>
+
+
+        <div class="year-of-study">
+          <div class="form-input event-name">
+            <label for="eventname">Year of study *</label>
+            <select name="eventname" id="eventname">
+              <option selected value="Select an option">Select an option</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="First Year">First Year</option>
+              <option value="Second Year">Second Year</option>
+              <option value="Third year">Third Year</option>
+              <option value="Fourth Year">Fourth Year</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="form-input">
+          <label for="fullname">Department*</label>
+          <input
+            type="text"
+            name="depaartment"
+            id="department"
+            placeholder="Enter your department"
+          />
+        </div>
+
+        <div class="form-input">
+          <label for="fullname">Enter your email address*</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@email.com"
+          />
+        </div>
+
       </div>
 
 
@@ -110,5 +267,23 @@
         <button>Submit</button>
       </div>
     </form>
+  </div>
+
+  <div class="footer">
+
+    <div class="image-footer">
+      <div class="image">
+        <img src="/assets/images/adcomsys.webp" alt="">
+      </div>
+      <div class="logo-text">
+        <em><b><i>AdComSys 2024</i></b></em>
+      </div>
+    </div>
+    <div class="footer-text">
+      <span>
+        This content is created by the AdComSys 2024 team. 
+        The data you submit will be sent to us. 
+      </span>
+    </div>
   </div>
 </div>

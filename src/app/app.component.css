@@ -53,11 +53,12 @@ header > section{
 
 
 @media screen and (max-width: 480px) {
-    .logo{
+    /* .logo{
         display: none;
-    }
+    } */
 
     .fixed-content{
-        width: 90vw;
+        margin-top: 10px;
+        width: 95vw;
     }
 }

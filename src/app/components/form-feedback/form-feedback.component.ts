@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class FormFeedbackComponent {
 
+  //function to generate rating
+  numberRating(rate:number) : number[]{
+    return Array.from({length:rate}, (v,k)=>k+1)
+  }
+
 }
